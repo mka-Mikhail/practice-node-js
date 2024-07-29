@@ -1,0 +1,29 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "distribution-tasks": "node ./distribution-tasks/index.js",
+    "working-on-arrays": "node ./working-on-arrays/index.js",
+    "callbacks": "node ./callbacks/index.js",
+    "reading-files": "node ./reading-files/index.js",
+    "import-export": "node ./import-export/index.js",
+    "json": "node ./json/index.js",
+    "objects": "node ./objects/index.js",
+    "node-js": "node ./node-js/index.js",
+    "strings": "node ./strings/index.js",
+    "classes": "node ./classes/index.js",
+    "promises": "node ./promises/index.js",
+    "http": "node ./http/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "keypress": "^0.2.1",
+    "xlsx": "^0.18.5"
+  }
+}

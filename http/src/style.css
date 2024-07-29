@@ -1,0 +1,42 @@
+body {
+	margin: 0 auto;
+	padding-top: 25px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+.button {
+	margin: 8px;
+	padding: 5px;
+	background-color: #86aaff;
+	font-size: medium;
+}
+
+.variable {
+	display: flex;
+	justify-content: space-between;
+}
+
+.cred {
+	margin: 8px;
+	padding: 6px;
+	width: 300px;
+	font-size: medium;
+}
+
+.delete-variable-button {
+	margin: 8px;
+	padding: 6px;
+	background-color: #ff3131;
+}
