@@ -1,31 +1,33 @@
-import child_process from 'child_process'
-import path from 'path'
-import process from 'process'
-import readline from 'readline/promises'
-import { stdin, stdout } from 'process'
-import fs from 'fs/promises'
+// let countOfTurns = 0
+// let last = new Date()
+// let next
+// let phases = ['|', '/', '-', '\\', '|', '/', '-', '\\']
+// let numOfPhase
+// let prefix = 'Число оборотов: '
+//
+// while (countOfTurns !== 3) {
+// 	numOfPhase = 0
+// 	while (numOfPhase !== phases.length) {
+// 		next = new Date()
+// 		if (next.getSeconds() - last.getSeconds() === 1) {
+// 			process.stdout.write(`\r${prefix}${countOfTurns}\t\t\t${phases[numOfPhase]}`)
+// 			numOfPhase++
+// 			last = next
+// 		}
+// 	}
+// 	countOfTurns++
+// }
 
-// let pathToFile = 'C:/Users/пользователь/Downloads/ТЕСТОВЫЕ ИСТОЧНИКИ ДАННЫХ'
-// console.log(path.normalize(pathToFile))
-// console.log(path.dirname(pathToFile))
-// child_process.exec(`start "" "${pathToFile}"`)
+let last = new Date()
+let next
+let filler = '='
+let fillers = ''
 
-// console.log(process.platform)
-
-const rl = readline.createInterface(stdin, stdout)
-
-let pathToFile = ''
-
-// stdin.addListener('data', (data) => {
-// 	console.log("ECHO: " + data.toString())
-// })
-
-console.log(process.cwd())
-
-const answer = await rl.question('Enter file name for writing\n')
-pathToFile = './' + answer
-await fs.open(pathToFile, 'w')
-
-// rl.on('line', async (stroke) => {
-// 	await fs.appendFile(pathToFile, stroke + '\n')
-// })
+while (true) {
+	next = new Date()
+	if (next.getSeconds() - last.getSeconds() === 1) {
+		fillers += filler
+		process.stdout.write(`\r[${fillers}]`)
+		last = next
+	}
+}

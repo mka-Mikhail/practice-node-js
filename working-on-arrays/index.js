@@ -35,27 +35,46 @@
 // console.log('МАССИВ ПОСЛЕ ФИЛЬТРАЦИИ ПО flag')
 // console.log(arrayAfterFiltering)
 
-let array1 = [
-	{ a: 'qqq', b: 'www', c: 'ooo' },
-	{ a: 'EEE', b: 'ijn', c: 'onl' },
-	{ a: '[]]', b: 'ppp', c: 'yyy' },
-]
-let array2 = [
-	{ a: 'qqq', b: 'www', c: 'ooo' },
-	{ a: 'EEE', b: 'ijn', c: 'onl' },
-	{ a: '[]]', b: 'ppp', c: 'yyy' },
-	{ a: 'sdv', b: '---', c: '===' },
-]
+// let array1 = [
+// 	{ a: 'qqq', b: 'www', c: 'ooo' },
+// 	{ a: 'EEE', b: 'ijn', c: 'onl' },
+// 	{ a: '[]]', b: 'ppp', c: 'yyy' },
+// ]
+// let array2 = [
+// 	{ a: 'qqq', b: 'www', c: 'ooo' },
+// 	{ a: 'EEE', b: 'ijn', c: 'onl' },
+// 	{ a: '[]]', b: 'ppp', c: 'yyy' },
+// 	{ a: 'sdv', b: '---', c: '===' },
+// ]
+//
+// let result = []
+// for (let i = 0; i < array1.length; i++) {
+// 	for (let key of Object.keys(array1[i])) {
+// 		if (array1[i][key] !== array2[i][key]) {
+// 			result.push(array2[i])
+// 			break
+// 		}
+// 	}
+// }
+// array2.slice(array1.length).forEach((el) => result.push(el))
+//
+// console.log(result)
 
-let result = []
-for (let i = 0; i < array1.length; i++) {
-	for (let key of Object.keys(array1[i])) {
-		if (array1[i][key] !== array2[i][key]) {
-			result.push(array2[i])
-			break
-		}
-	}
+let obj1 = {
+	'set1': 'hjdbvcosdufh',
+	'set2': 'er',
+	'set3': 'dfbgdf',
+	'sqw1': 'hjdbvcofdbtgetysdufh'
 }
-array2.slice(array1.length).forEach((el) => result.push(el))
 
-console.log(result)
+let obj2 = {
+	'set1': '1111',
+	'set3': '4444',
+	'set4': '8888'
+}
+
+
+obj1 = { ...obj1, ...obj2}
+
+// console.table(arr1)
+console.log(obj1)

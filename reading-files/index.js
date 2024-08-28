@@ -2,15 +2,15 @@ import keypress from 'keypress'
 import { read } from './read-csv-using-csv-parser.js'
 import { getData } from './read-csv-using-custom-parser.js'
 
-keypress(process.stdin)
-
-process.stdin.on('keypress', (ch, key) => {
-	if (key && key.name === 'escape') {
-		process.exit(0)
-	}
-})
-process.stdin.setRawMode(true)
-process.stdin.resume()
+// keypress(process.stdin)
+//
+// process.stdin.on('keypress', (ch, key) => {
+// 	if (key && key.name === 'escape') {
+// 		process.exit(0)
+// 	}
+// })
+// process.stdin.setRawMode(true)
+// process.stdin.resume()
 
 let start
 let end
